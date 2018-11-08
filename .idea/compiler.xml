@@ -25,8 +25,8 @@
         <module name="Spring_Potroshitel" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Spring_Potroshitel" target="1.6" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="Spring_Potroshitel" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

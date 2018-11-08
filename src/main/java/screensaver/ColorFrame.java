@@ -12,10 +12,8 @@ import java.util.Random;
  * Created by Erik Feigin on 18/10/2018.
  */
 @Component
-public class ColorFrame extends JFrame {
+public abstract class ColorFrame extends JFrame {
 
-    @Autowired
-    private Color color;
 
     public ColorFrame() {
         setSize(200, 200);
@@ -26,11 +24,9 @@ public class ColorFrame extends JFrame {
     public void showOnRandomPlace (){
         Random random = new Random();
         setLocation(random.nextInt(1200), random.nextInt(700));
-        getContentPane().setBackground(color);
+        getContentPane().setBackground(getColor());
         repaint();
     }
 
-    public void setColor(Color color) {
-        this.color = color;
-    }
+    protected abstract Color getColor();
 }
